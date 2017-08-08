@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<title>jQuery RSS/ATOM Feed Demo</title>
+<link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
+<!-- Include meta tag to ensure proper rendering and touch zooming -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Include jQuery Mobile stylesheets -->
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+
+<!-- Include the jQuery library -->
+<script src="jquery-1.11.3.min.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script src="jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/FeedEk.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+     $('#divRss').FeedEk({
+    FeedUrl : 'http://feeds.bbci.co.uk/news/rss.xml',
+	 MaxCount : 50,
+    ShowDesc : true,
+    ShowPubDate:true,
+    TitleLinkTarget:'_blank'
+  });
+});
+</script>
+</head>
+<body>
+
+
+
+
+<div data-role="header" data-position="fixed">
+
+  <h1>News RSS</h1>
+
+</div>
+<div id="divRss"></div>
+</body>
+
+</html>
